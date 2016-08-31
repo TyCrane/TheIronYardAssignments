@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model ViewsAndModels_WEB.Models.StudentModel
+
+<div>
+   @using (Ajax.BeginForm("GetAllStudents", "Home", new AjaxOptions { UpdateTargetId = "targets" }))
+   {
+    <div class="targets"></div>
+
+    <button type="submit">Get All Students</button>
+   }
+    <div>
+        <button onclick="location.href='@Url.Action("InsertStudentView", "Home")'">Insert Student</button>
+    </div>
+    <div>
+        <button onclick="location.href='@Url.Action("UpdateStudentView", "Home")'">Update Student</button>
+    </div>
+</div>
+
+
+

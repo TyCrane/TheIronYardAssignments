@@ -1,0 +1,31 @@
+﻿
+
+@model List<MVCForms_WEB.Models.Task>
+ @{
+        List<MVCForms_WEB.Models.Task> taskList = new List<MVCForms_WEB.Models.Task>();
+    
+
+        if (Session["taskList"] != null)
+             {
+                 taskList = (List<MVCForms_WEB.Models.Task>)Session["taskList"];
+             }
+   }
+
+ <div>
+         <h1>All Current Tasks</h1>
+            @{
+                foreach (MVCForms_WEB.Models.Task thisTask in taskList)
+                {
+                    <div>
+                        <h1>Task: </h1>
+                        <label>Task Creator:</label>
+                        <input type="Text" value=@thisTask.createdBy>
+                        <label>Task Description:</label>
+                        <input type="Text" value=@thisTask.description>
+                        <label>Task Completion Status:</label>
+                        <input type="Text" value=@thisTask.status>
+                    </div>
+                }
+            } 
+</div>
+

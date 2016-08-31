@@ -1,0 +1,51 @@
+﻿
+
+
+@model ViewsAndModels_WEB.Models.StudentModel
+@{
+    ViewsAndModels_WEB.Models.StudentModel currentStudent = new ViewsAndModels_WEB.Models.StudentModel();
+    //pull staffmember from session and store in variable
+    if (Session["studentsList"] != null)
+    {
+        currentStudent = (ViewsAndModels_WEB.Models.StudentModel)Session["studentsList"];
+    }
+}
+
+@using (Ajax.BeginForm("GetAllStudents", "Home", new AjaxOptions { UpdateTargetId = "targets" }))
+{
+<div>
+    @Html.DropDownList("studentsSelectList", (SelectList)ViewBag.studentsList, "-- Select Student --")
+    <div>
+        @Html.TextBoxFor(m => m.firstName, new { Value = currentStudent.firstName})
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.lastName, new { Value = currentStudent.lastName })
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.gender, new { Value = currentStudent.gender })
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.age, new { Value = currentStudent.age })
+    </div>
+    <div>
+        <button type="submit">Update Student</button>
+    </div>
+</div>
+}
+<div>
+    <button onclick="location.href='@Url.Action("Index", "Home")'">Home</button>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //for onchange of selectStudent dropdown
+        $("#studentsSelectList").change(function () {
+            var studentID = $("#studentsSelectList").val();
+            //puts the newly selected student in the session
+            var url = '@Url.Action("GetAjaxStaff", "Home")';
+            $.post(url, { studentID: studentID })
+        });
+    });
+        
+</script>

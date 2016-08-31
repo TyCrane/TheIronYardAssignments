@@ -1,0 +1,56 @@
+﻿
+
+
+@model AlbumsAndArtist_WEB_Week4.Models.albumsModel
+
+<div style="margin-top: 2em">
+    @Html.Partial("_ArtistPartial")
+</div>
+
+<div style="margin-top: 2em">
+    @Html.Partial("_GetArtistPartial")
+</div>
+
+@using (Ajax.BeginForm("CreateAlbum", "Albums", new AjaxOptions { UpdateTargetId = "target4" }))
+{
+    <div style="background-color: cadetblue; margin-top: 2em">
+        <label>Submit Succesful: </label>
+        <div id="target4"></div>
+        <p>
+            <label>Album Name:</label>
+            @Html.TextBoxFor(Album => Album.albumName)
+        </p>
+        <p>
+            <label>Amount Adding to Stock:</label>
+            @Html.TextBoxFor(Album => Album.amountInStock)
+        </p>
+        <p>
+            <label>Normal Price:</label>
+            @Html.TextBoxFor(Album => Album.normalPrice)
+        </p>
+        <p>
+            <label>Sale Price:</label>
+            @Html.TextBoxFor(Album => Album.salePrice)
+        </p>
+        <p>
+            <label>Artist ID:</label>
+            @Html.TextBoxFor(Album => Album.artistID)
+        </p>
+
+        <button type="submit">Submit New Album</button>
+    </div>
+}
+
+<div style="margin-top: 2em">
+    @Html.Partial("_getAlbumPartial")
+</div>
+
+
+<div style="margin-top: 2em">
+    @Html.Partial("_SellAlbum")
+</div>
+
+<div style="margin-top: 2em">
+    @Html.Partial("GetAlbums")
+</div>
+

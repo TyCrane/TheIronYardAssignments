@@ -1,0 +1,28 @@
+﻿
+
+@model ViewsAndModels_WEB.Models.StudentModel
+@using (Ajax.BeginForm("GetAllStudents", "Home", new AjaxOptions { UpdateTargetId = "targets" }))
+{
+<div>
+    <label>First Name:</label>
+    @Html.TextBoxFor(m => m.firstName)
+</div>
+<div>
+    <label>Last Name:</label>
+    @Html.TextBoxFor(m => m.lastName)
+</div>
+<div>
+    <label>Gender:</label>
+    @Html.TextBoxFor(m => m.gender)
+</div>
+<div>
+    <label>Age:</label>
+    @Html.TextBoxFor(m => m.age)
+</div>
+<div>
+    <button type="submit">Insert Student</button>
+</div>
+}
+<div>
+    <button onclick="location.href='@Url.Action("Index", "Home")'">Home</button>
+</div>

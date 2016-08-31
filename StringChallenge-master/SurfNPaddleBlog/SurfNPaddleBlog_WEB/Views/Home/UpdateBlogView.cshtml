@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "UpdateBlogView";
+}
+
+@model SurfNPaddleBlog_WEB.Models.Blog
+@{
+    SurfNPaddleBlog_WEB.Models.Blog blog = new SurfNPaddleBlog_WEB.Models.Blog();
+    //pull staffmember from session and store in variable
+    if (Session["thisBlog"] != null)
+    {
+        blog = (SurfNPaddleBlog_WEB.Models.Blog)Session["thisBlog"];
+    }
+}
+
+<h2>UpdateBlogView</h2>
+
+<label>Blog: </label>
+@Html.DropDownList("blogID", (SelectList)ViewBag.blogsSelectList, "--select--")
+
+<div>
+    @using (Ajax.BeginForm("blogID", "Home", new AjaxOptions { UpdateTargetId = "targets" }))
+    {
+        <div class="targets"></div>
+        <div>
+            <label>Title</label>
+            @Html.TextBoxFor(m => m.title, new { Value = blog.title })
+        </div>
+        <div>
+            <label>Author</label>
+            @Html.TextBoxFor(m => m.author, new { Value = blog.author })
+        </div>
+        <div>
+            <label>Body</label>
+            @Html.TextAreaFor(m => blog.body)
+        </div>
+        <div>
+            <label>Picture URL</label>
+            @Html.TextBoxFor(m => m.pic, new { Value = blog.pic })
+        </div>
+        <button type="submit">Submit Post</button>
+    }
+</div>
+
+
+
+@section scripts
+{
+
+    <script>
+
+        $(document).ready(function () {
+            $("#blogID").change(function () {
+                var blogID = $("#blogID").val();
+                $.post('@Url.Action("GetBlog", "Home")', { blogID: blogID });
+            });
+        });
+
+    </script>
+
+}

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "InsertBlog";
+}
+
+@model SurfNPaddleBlog_WEB.Models.Blog
+
+<h2>InsertBlog</h2>
+
+<div>
+    @using (Ajax.BeginForm("InsertBlog", "Home", new AjaxOptions { UpdateTargetId = "targets" }))
+    {
+        <div class="targets"></div>
+        <div>
+            <label>Title</label>
+            @Html.TextBoxFor(m => m.title)
+        </div>
+        <div>
+            <label>Author</label>
+            @Html.TextBoxFor(m => m.author)
+        </div>
+        <div>
+            <label>Body</label>
+            @Html.TextAreaFor(m => m.body)
+        </div>
+        <div>
+            <label>Picture URL</label>
+            @Html.TextBoxFor(m => m.pic)
+        </div>
+        <button type="submit">Submit Post</button>
+    }
+</div>

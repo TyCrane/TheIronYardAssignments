@@ -1,0 +1,24 @@
+﻿
+
+@model MVCForms_WEB.Models.Task
+
+
+@using (Ajax.BeginForm("CreateStaffMember", "Staff", new AjaxOptions { UpdateTargetId = "target" }))
+{
+    <div class="target"></div>
+
+       <h1>Create a new Task</h1>
+
+       <label>Created By: </label>
+        @Html.TextBoxFor(m => m.createdBy)
+
+      <label>Task Description: </label>
+      @Html.TextBoxFor(m => m.description)
+
+      <label>Completion Status: </label>
+      @Html.TextBoxFor(m => m.status)
+
+      <button type="submit">Submit Task</button>
+
+}
+

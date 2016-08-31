@@ -1,0 +1,25 @@
+﻿
+
+
+
+
+
+@model AlbumsAndArtist_WEB_Week4.Models.albumsModel
+
+
+
+@using (Ajax.BeginForm("SellAlbum", "Albums", new AjaxOptions { UpdateTargetId = "target2" }))
+{
+    <div style="background-color: cadetblue">
+        <label>Amount Left in Stock:</label>
+        <div id="target2"></div>
+
+        <p>
+            <label>Album Name:</label>
+            @Html.TextBoxFor(Album => Album.albumName)
+        </p>
+
+        <button type="submit">Submit Sell</button>
+    </div>
+}
+

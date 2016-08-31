@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSSWeek5BackEnd", "CSSWeek5BackEnd", "{B69C18A6-F4FE-4006-9671-B980437AD1F0}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\Front End\HWCSS\Index.html = ..\..\..\..\Desktop\Front End\HWCSS\Index.html
+		..\..\..\..\Desktop\Front End\HWCSS\Logo.png = ..\..\..\..\Desktop\Front End\HWCSS\Logo.png
+		..\..\..\..\Desktop\Front End\HWCSS\PostPic.jpg = ..\..\..\..\Desktop\Front End\HWCSS\PostPic.jpg
+		..\..\..\..\Desktop\Front End\HWCSS\stylesheet.css = ..\..\..\..\Desktop\Front End\HWCSS\stylesheet.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSSWeek5FrontEndAssignments", "CSSWeek5FrontEndAssignments", "{140ADA3C-731F-41F9-8CB3-6D1877194024}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignment1", "Assignment1", "{B5DFFAFD-5987-4927-BF4D-74F8E2122C95}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\Front End\FrontEnd\CssMeiaQuery\Index.html = ..\..\..\..\Desktop\Front End\FrontEnd\CssMeiaQuery\Index.html
+		..\..\..\..\Desktop\Front End\FrontEnd\CssMeiaQuery\quote-left.png = ..\..\..\..\Desktop\Front End\FrontEnd\CssMeiaQuery\quote-left.png
+		..\..\..\..\Desktop\Front End\FrontEnd\CssMeiaQuery\quote-right.png = ..\..\..\..\Desktop\Front End\FrontEnd\CssMeiaQuery\quote-right.png
+		..\..\..\..\Desktop\Front End\FrontEnd\CssMeiaQuery\stylesheet.css = ..\..\..\..\Desktop\Front End\FrontEnd\CssMeiaQuery\stylesheet.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LayouResponsive", "LayouResponsive", "{65A57CE0-AE6D-419B-AFFC-9108BF1AA15A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\Index.html = ..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\Index.html
+		..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\Logo.png = ..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\Logo.png
+		..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\paddleSurf.jpg = ..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\paddleSurf.jpg
+		..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\SpaceHair.jpg = ..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\SpaceHair.jpg
+		..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\stylesheet.css = ..\..\..\..\Desktop\Front End\FrontEnd\CssLayout\BlogLayout\stylesheet.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlogResponsive", "BlogResponsive", "{A7F11227-C7A0-4B5B-9555-8699015C8A12}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\LayoutResponsiveBlog.zip = ..\..\..\..\Downloads\LayoutResponsiveBlog.zip
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5DFFAFD-5987-4927-BF4D-74F8E2122C95} = {140ADA3C-731F-41F9-8CB3-6D1877194024}
+		{65A57CE0-AE6D-419B-AFFC-9108BF1AA15A} = {140ADA3C-731F-41F9-8CB3-6D1877194024}
+		{A7F11227-C7A0-4B5B-9555-8699015C8A12} = {140ADA3C-731F-41F9-8CB3-6D1877194024}
+	EndGlobalSection
+EndGlobal

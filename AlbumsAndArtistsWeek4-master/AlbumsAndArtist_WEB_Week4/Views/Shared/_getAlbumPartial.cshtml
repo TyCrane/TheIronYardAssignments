@@ -1,0 +1,22 @@
+﻿
+@model AlbumsAndArtist_WEB_Week4.Models.albumsModel
+
+@using (Ajax.BeginForm("GetAlbum", "Albums", new AjaxOptions { UpdateTargetId = "target3" }))
+{
+    <div style="background-color: cadetblue; margin-top: 2em">
+ 
+
+        <p>
+            <label>Album Name:</label>
+            @Html.TextBoxFor(Album => Album.albumName)
+        </p>
+        <p>
+            <label>Artist Name:</label>
+            @Html.TextBoxFor(Album => Album.artistName)
+        </p>
+
+        <div id="target3" style="margin-top: 1em"></div>
+
+        <button type="submit">Get Album Info</button>
+    </div>
+}

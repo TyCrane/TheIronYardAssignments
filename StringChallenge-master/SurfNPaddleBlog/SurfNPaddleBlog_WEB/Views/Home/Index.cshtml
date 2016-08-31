@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style="margin:auto">
+    Surf N Paddle Co
+</div>
+
+<div>
+    @Html.Partial("blog")
+</div>
+
+<button onclick="location.href='@Url.Action("InsertBlogView", "Home")'">Create new Post</button>
+<button onclick="location.href='@Url.Action("UpdateBlogView", "Home")'">Update Post</button>

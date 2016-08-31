@@ -1,0 +1,22 @@
+﻿
+
+
+@model AlbumsAndArtist_WEB_Week4.Models.ArtistModel
+
+
+@using (Ajax.BeginForm("Createartist", "Artist", new AjaxOptions { UpdateTargetId = "target" }))
+{
+    <div style="background-color: cadetblue">
+        <label>Artist ID:</label>
+        <div id="target"></div>
+
+        <p>
+            <label>Artist Name:</label>
+            @Html.TextBoxFor(Artist => Artist.artistName)
+        </p>
+
+        <button type="submit">Submit Artist</button>
+    </div>
+}
+
+

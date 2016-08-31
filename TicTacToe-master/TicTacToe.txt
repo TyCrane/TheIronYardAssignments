@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tic_tac_toe
+{
+    class Program
+    {
+        
+
+        static string p1Input;
+
+        static void Main(string[] args)
+
+        {
+            Draw();
+
+            Console.ReadLine();
+
+           
+        }
+        
+        static void WL(string t)
+        {
+            Console.WriteLine(t);
+        }
+        static string RL()
+        {
+            return
+            Console.ReadLine();
+        }
+        
+        
+        static void Draw()
+        {
+            WL("_A_|_B_|_C_");
+            WL("_D_|_E_|_F_");
+            WL("_G_|_H_|_I_");
+        }
+
+        static void P1Turn()
+        {
+            WL("Player 1 select a letter");
+            p1Input = RL();
+            switch (p1Input)
+            {
+                case "A":
+                    WL("_X_|_B_|_C_");
+                    break;
+
+            }
+
+        }
+
+
+
+
+
+    //end
+    }
+}

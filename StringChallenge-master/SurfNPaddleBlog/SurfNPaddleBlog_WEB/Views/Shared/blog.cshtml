@@ -1,0 +1,23 @@
+﻿
+@{ 
+    List<SurfNPaddleBlog_WEB.Models.Blog> blogList = ViewBag.blogs;
+    blogList.Reverse();
+    SurfNPaddleBlog_WEB.Models.Blog firstBlog = new SurfNPaddleBlog_WEB.Models.Blog();
+    if (blogList.Count > 0)
+    {
+        firstBlog = blogList[0];
+    }
+
+}
+
+<div>
+    <label>@firstBlog.title</label>
+    <label>@firstBlog.author</label>
+</div>
+<div>
+    @firstBlog.body
+</div>
+<div>
+    <img src="@firstBlog.pic"/>
+</div>
+
